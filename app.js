@@ -1,8 +1,11 @@
-<<<<<<< HEAD
+
 
 setTimeout(() => { let canvas = document.getElementById("myCanvas");
 console.log(canvas)
-const ctx = canvas.getContext("2d");
+const redButton = document.getElementById("red");
+
+
+let ctx = canvas.getContext("2d");
 
 let coord = { x: 0, y: 0 };
 
@@ -11,17 +14,20 @@ document.addEventListener("mouseup", stop);
 window.addEventListener("resize", resize);
 
 function colorPicker(col){
-    if (col = "red"){
+    if (col == "red"){
         return "#FF0000"
     }
-    else if (col = "blue"){
+    else if (col == "blue"){
         return "#0000FF"
     }
-    else if (col = "green"){
+    else if (col == "green"){
         return "#008000"
     }
-    else if (col = "black"){
+    else if (col == "black"){
         return "#000000"
+    }
+    else{
+        return
     }
 }
 
@@ -41,13 +47,15 @@ function stop() {
   document.removeEventListener("mousemove", draw);
 }
 function draw(event, color) {
-  ctx.beginPath();
+    redButton.addEventListener("click", () =>{
+        color = "#FF0000"
+});
+    ctx.beginPath();
   ctx.lineWidth = 5;
   ctx.lineCap = "round";
-  color = colorPicker();
-  if (color = null){
-    color = "#000000"    
-}
+  if (color == null){
+      color = "#000000";
+  }
   ctx.strokeStyle = color;
   ctx.moveTo(coord.x, coord.y);
   reposition(event);
@@ -56,19 +64,19 @@ function draw(event, color) {
 }
  }, 2000);
 
-=======
-const express = require('express')
-const app = express()
-const port = 3000
+// =======
+// const express = require('express')
+// const app = express()
+// const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-app.get('/hi', (req, res) => {
-    res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
+// app.get('/hi', (req, res) => {
+//     res.send('Hello World!')
+// })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
->>>>>>> 9b02b8b5b56da5774d4ce5114299594a6cadd2d9
+// app.listen(port, () => {
+//   console.log(`Example app listening on port ${port}`)
+// })
+// >>>>>>> 9b02b8b5b56da5774d4ce5114299594a6cadd2d9
