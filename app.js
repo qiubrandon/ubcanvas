@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 setTimeout(() => { let canvas = document.getElementById("myCanvas");
 console.log(canvas)
@@ -56,19 +55,3 @@ function draw(event, color) {
 }
  }, 2000);
 
-=======
-const express = require('express')
-const app = express()
-const port = 3000
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-app.get('/hi', (req, res) => {
-    res.send('Hello World!')
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
->>>>>>> 9b02b8b5b56da5774d4ce5114299594a6cadd2d9
