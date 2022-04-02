@@ -1,0 +1,22 @@
+{
+  "name": "ub-hacking-spring-2022-teams-ubc",
+  "version": "1.0.0",
+  "description": "Canvas app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UBHSpring2022/ub-hacking-spring-2022-teams-ubc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UBHSpring2022/ub-hacking-spring-2022-teams-ubc/issues"
+  },
+  "homepage": "https://github.com/UBHSpring2022/ub-hacking-spring-2022-teams-ubc#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
