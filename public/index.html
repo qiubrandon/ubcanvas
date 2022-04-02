@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD:index.html
-    <script src = "/app.js"></script>
-    <script src = "/styles.css"></script>
+    <script src = "/public/app.js"></script>
+    <script src = "/public/styles.css"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <head>
         <meta name="viewport" content="width=device-width, user-scalable=no">
-=======
-    <head>
-        <script src = "/app.js"></script>
-        <script src = "/styles.css"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <head>
-            
->>>>>>> c4805149b043bf2e990b364651ac39066893d14c:public/index.html
     </head>
     <body>
         <h1 class = "container bg-primary rounded py-3 my-3" style = "text-align: center; color: white;">UBCanvas</h1>
@@ -20,12 +12,23 @@
             border: 3px solid black; top:110px;right: 630px; 
             border-radius: 20px;"
             id="myCanvas" width="700" height="500"></canvas>
+            <script>
+                setTimeout(() => { document.getElementById("clearButton").addEventListener("click", () => {
+                    let canvas = document.getElementById("myCanvas");
+                    let context = canvas.getContext('2d');
+                    context.clearRect(0, 0, canvas.width, canvas.height)}, 2000)
+                });
+            </script>
+            
         </div>
-        <div id = "sideCanvas" >
+        <div>
+            <button id = "clearButton"style = "position: absolute; top: 30px;">Clear</button>
+        </div>
+        <!-- <div id = "sideCanvas" >
             <canvas id = "secondaryCanvas" style = "height: 250px; width: 410px;border: 3px solid black; top:110px;right: 630px; 
-            border-radius: 20px; position: absolute; right: 200px;"></canvas>
+            border-radius: 20px; "></canvas>
             <canvas id = "thirdCanvas" style = "height: 240px; width: 410px;border: 3px solid black; top:375px;right: 630px; 
             border-radius: 20px; position: absolute; right: 200px;"></canvas>
-        </div>
+        </div> -->
     </body>
 </html>
