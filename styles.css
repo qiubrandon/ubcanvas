@@ -1,6 +1,7 @@
 #myCanvas {
     position:absolute;
     left: 100px;
+    cursor: alias;
 }
 
 #red {
