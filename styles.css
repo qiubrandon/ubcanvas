@@ -1,0 +1,10 @@
+#myCanvas {
+    position:absolute;
+    left: 100px;
+}
+
+#red {
+    position: absolute;
+    left: 200px;
+    top: 100px;
+}
