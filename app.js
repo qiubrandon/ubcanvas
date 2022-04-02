@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 280db0e6bea3dc2c8a71fb4eeee9df94324ad43a
 
 setTimeout(() => { let canvas = document.getElementById("myCanvas");
 console.log(canvas)
@@ -64,6 +67,7 @@ function draw(event, color) {
 }
  }, 2000);
 
+<<<<<<< HEAD
 // =======
 // const express = require('express')
 // const app = express()
@@ -80,3 +84,5 @@ function draw(event, color) {
 //   console.log(`Example app listening on port ${port}`)
 // })
 // >>>>>>> 9b02b8b5b56da5774d4ce5114299594a6cadd2d9
+=======
+>>>>>>> 280db0e6bea3dc2c8a71fb4eeee9df94324ad43a
