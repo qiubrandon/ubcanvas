@@ -4,26 +4,20 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+const fs = require('fs');
+
+
+app.use(express.static('public'))
+
 
 app.get('/', (req, res) => {
 
-    const fs = require('fs');
-    var filename = "index.html";
-    var htmldata = fs.readFile(filename,'utf8',(err,data) => {
-        try {
-            res.send(data);
-        }
-        catch(err){
-            res.send("404 Error");
-        };
-    });
+    res.sendFile(path.join(__dirname + '/public/index.html'));
 
 })
 
-app.get('/hi', (req, res) => {
-    res.send('Hello World!')
-})
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+    
+    console.log(`Example app listening on port ${port}`)
 })

@@ -1,10 +1,10 @@
-#myCanvas {
+myCanvas {
     position:absolute;
     left: 100px;
     cursor: alias;
 }
 
-#red {
+red {
     position: absolute;
     left: 200px;
     top: 100px;
