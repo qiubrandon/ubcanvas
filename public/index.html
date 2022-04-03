@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html>
     <script src = "/public/app.js"></script>
-    <script src = "/public/styles.css"></script>
+    <link rel="stylesheet" href="/public/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <head>
         <meta name="viewport" content="width=device-width, user-scalable=no">
     </head>
     <body>
-        <h1 class = "container bg-primary rounded py-3 my-3" style = "text-align: center; color: white;">UBCanvas</h1>
+        <h1 class = "container bg-primary rounded py-3 my-3" style = "text-align: center; color: white;">✏️ UBCanvas</h1>
         <div style = "text-align: center;"id="canvasContainer">
             <canvas style = "position: absolute;
-            border: 3px solid black; top:110px;right: 630px; 
+            border: 3px solid black;  
             border-radius: 20px;"
-            id="myCanvas" width="700" height="500"></canvas>
+            id="myCanvas" width="300" height="300"></canvas>
             <script>
-                setTimeout(() => { document.getElementById("clearButton").addEventListener("click", () => {
-                    let canvas = document.getElementById("myCanvas");
-                    let context = canvas.getContext('2d');
-                    context.clearRect(0, 0, canvas.width, canvas.height)}, 2000)
+                setTimeout(() => { 
+                    document.getElementById("clearButton").addEventListener("click", () => {
+                        let canvas = document.getElementById("myCanvas");
+                        let context = canvas.getContext('2d');
+                        context.clearRect(0, 0, canvas.width, canvas.height)}, 100)
+                setTimeout(() => {document.getElementById("bluebtn").addEventListener("click", ()=>{
+                        let canvas = document.getElementById("myCanvas");
+                        let context = canvas.getContext('2d');
+                        console.log('dsadsadsa')
+                        context.strokeStyle = "#0000FF";
+                    });
+                }, 100)
                 });
             </script>
             
         </div>
         <div>
-            <button id = "clearButton"style = "position: absolute; top: 30px;">Clear</button>
+            <button class = "btn btn-outline-danger"id = "clearButton" style = "position: absolute; bottom: 55px; left: 200px;">Clear</button>
+            <button type="button" class="btn btn-primary rounded btn-lg" id="bluebtn"></button>
+            <!-- <button type="button" class="btn btn-primary rounded btn-lg" id="redbtn"></button> -->
         </div>
+        
         <!-- <div id = "sideCanvas" >
             <canvas id = "secondaryCanvas" style = "height: 250px; width: 410px;border: 3px solid black; top:110px;right: 630px; 
             border-radius: 20px; "></canvas>

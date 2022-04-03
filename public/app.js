@@ -10,14 +10,15 @@ setTimeout(() => {
   document.addEventListener("mouseup", stop);
   window.addEventListener("resize", resize);
 
+  resize()
 
   function resize() {
-    ctx.canvas.width = window.innerWidth - 545;
-    ctx.canvas.height = window.innerHeight - 210;
+    ctx.canvas.width = window.innerWidth * .5;
+    ctx.canvas.height = window.innerHeight * .7;
   }
   function reposition(event) {
-    coord.x = event.clientX - canvas.offsetLeft;
-    coord.y = event.clientY - canvas.offsetTop;
+    coord.x = (event.clientX - canvas.offsetLeft) - 16;
+    coord.y = (event.clientY - canvas.offsetTop) + 20;
   }
   function start(event) {
     document.addEventListener("mousemove", draw);
@@ -30,13 +31,10 @@ setTimeout(() => {
   ctx.beginPath();
     ctx.lineWidth = 5;
     ctx.lineCap = "round";
-    if (color == null){
-        color = "#000000";
-    }
-    ctx.strokeStyle = color;
+    ctx.strokeStyle = "#000000";
     ctx.moveTo(coord.x, coord.y);
     reposition(event);
     ctx.lineTo(coord.x, coord.y);
     ctx.stroke();
   }
-}, 2000);
+}, 100);
