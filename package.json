@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/UBHSpring2022/ub-hacking-spring-2022-teams-ubc#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "p5": "^1.4.1",
+    "socket.io": "^4.4.1"
   }
 }
