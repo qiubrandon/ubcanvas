@@ -3,18 +3,16 @@ const path = require('path');
 const app = express();
 const port = 3000;
 const socket = require('socket.io')
-const fs = require('fs');
 
-app.use(express.static('./public'));
+
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
 
-    res.sendFile(path.join(__dirname + '/public/index.html'));
+    res.sendFile(path.join(__dirname + '/index.html'));
 
 });
-app.get('/dailysub', (req,res) =>{
-    res.sendFile(path.join(__dirname + '/public/submissions.html'));
-});
+
 
 const server = app.listen(port, () => {
     console.log(`Canvas app listening on port ${port}`)
